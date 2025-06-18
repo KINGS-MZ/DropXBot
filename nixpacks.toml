@@ -1,0 +1,5 @@
+[start]
+cmd = "node index.js"
+
+[phases.setup]
+nixPkgs = ["nodejs-16_x", "nodejs.pkgs.npm-9_x"] 
