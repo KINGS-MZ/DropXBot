@@ -1,0 +1,7 @@
+node_modules/
+.env
+*.log
+.DS_Store
+users.json
+steam_accounts.json
+referrals.json
