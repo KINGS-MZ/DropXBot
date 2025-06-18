@@ -55,6 +55,16 @@ if (!fs.existsSync('./accounts')) {
     console.log('📁 Created accounts directory');
 }
 
+// If no accounts, try to load from alternative location
+if (Object.keys(steamAccounts).length === 0 && fs.existsSync('./accounts/steam_accounts.json')) {
+    try {
+        steamAccounts = JSON.parse(fs.readFileSync('./accounts/steam_accounts.json', 'utf8'));
+        console.log('📁 Loaded accounts from accounts directory');
+    } catch (error) {
+        console.error('❌ Error loading accounts from accounts directory:', error.message);
+    }
+}
+
 // Configuration
 const CONFIG = {
     POINTS_PER_REFERRAL: 10,
