@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# User data
+users.json
+referrals.json
+
+# Environment variables
+.env
+
+# OS specific
+.DS_Store
+Thumbs.db 
